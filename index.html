@@ -1,109 +1,216 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>ArpaService - Premium Services</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f9;
-        }
-        header {
-            background-color: #333;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-        header h1 {
-            margin: 0;
-            font-size: 3em;
-        }
-        section.hero {
-            background: url('your-image.jpg') no-repeat center center/cover;
-            height: 600px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            text-align: center;
-        }
-        section.hero h2 {
-            font-size: 2.5em;
-        }
-        section.about, section.services {
-            padding: 50px 20px;
-            text-align: center;
-        }
-        section.about h2, section.services h2 {
-            font-size: 2.5em;
-            margin-bottom: 20px;
-        }
-        section.services .service {
-            display: inline-block;
-            width: 30%;
-            margin: 20px;
-            background: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 20px;
-        }
-        footer a {
-            color: #f4f4f9;
-            text-decoration: none;
-        }
-        footer a:hover {
-            text-decoration: underline;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Arpa Service | Premium Staff Hiring</title>
+  <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Urbanist', sans-serif;
+    }
+
+    body {
+      background: #fff;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #1f2937;
+      color: white;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      font-size: 28px;
+    }
+
+    nav a {
+      margin-left: 20px;
+      color: #f3f3f3;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .hero {
+      background: linear-gradient(to right, #1f2937, #4b5563);
+      color: white;
+      text-align: center;
+      padding: 100px 20px 60px;
+    }
+
+    .hero h2 {
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 20px;
+      max-width: 700px;
+      margin: 0 auto 30px;
+    }
+
+    .cta-btn {
+      background: #facc15;
+      color: #1f2937;
+      padding: 15px 30px;
+      font-size: 18px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .section-title {
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .about, .mission, .cta-note {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 30px;
+      text-align: center;
+    }
+
+    .service-box {
+      background: #f9fafb;
+      border-radius: 10px;
+      padding: 30px 20px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    }
+
+    .service-box img {
+      width: 80px;
+      margin-bottom: 15px;
+    }
+
+    .service-box h3 {
+      margin-bottom: 10px;
+    }
+
+    .testimonials {
+      background: #f3f4f6;
+      padding: 60px 20px;
+    }
+
+    .testimonial {
+      background: white;
+      border-radius: 10px;
+      padding: 30px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      margin: 20px auto;
+      max-width: 600px;
+    }
+
+    .testimonial h4 {
+      margin-bottom: 10px;
+    }
+
+    footer {
+      background: #1f2937;
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+    }
+
+    footer p {
+      margin: 5px 0;
+    }
+  </style>
 </head>
 <body>
 
-    <header>
-        <h1>ArpaService</h1>
-        <p>Your premium solution for quality service providers</p>
-    </header>
+<header>
+  <h1>Arpa Service</h1>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#testimonials">Reviews</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
 
-    <section class="hero">
-        <div>
-            <h2>Welcome to ArpaService</h2>
-            <p>We provide skilled, reliable, and verified service providers for all your needs</p>
-        </div>
-    </section>
+<section class="hero">
+  <h2>Hire Trusted Cooks, Cleaners & Staff</h2>
+  <p>India's premium staffing service for restaurants, homes, and businesses. Reliable workers at your fingertips.</p>
+  <button class="cta-btn">Hire Now</button>
+</section>
 
-    <section class="about">
-        <h2>About Us</h2>
-        <p>At ArpaService, we connect businesses with professional service providers such as cooks, waiters, and cleaners. Our aim is to ensure quality, timely service with verified professionals who are highly trained to meet your needs.</p>
-    </section>
+<section id="about">
+  <h2 class="section-title">About Us</h2>
+  <p class="about">At Arpa Service, we connect verified domestic & commercial staff with clients across India. With a mission to simplify hiring, we offer a range of services with flexible payment options and trusted support.</p>
+</section>
 
-    <section class="services">
-        <h2>Our Services</h2>
-        <div class="service">
-            <h3>Waiters</h3>
-            <p>Our waiters are well-trained and experienced to provide exceptional service at your restaurant or event.</p>
-        </div>
-        <div class="service">
-            <h3>Cooks</h3>
-            <p>We offer expert cooks specializing in various cuisines, ensuring delicious and timely food preparation.</p>
-        </div>
-        <div class="service">
-            <h3>Housekeeping</h3>
-            <p>Our housekeeping staff are efficient, reliable, and well-trained to keep your spaces spotless.</p>
-        </div>
-    </section>
+<section id="mission">
+  <h2 class="section-title">Our Mission</h2>
+  <p class="mission">To deliver top-tier professionals to every Indian doorstep, ensuring trust, safety, and satisfaction for both staff and employers.</p>
+</section>
 
-    <footer>
-        <p>&copy; 2025 ArpaService. All rights reserved. | <a href="#">Contact Us</a></p>
-    </footer>
+<section id="services">
+  <h2 class="section-title">Our Services</h2>
+  <div class="services">
+    <div class="service-box">
+      <img src="https://cdn-icons-png.flaticon.com/512/3456/3456426.png" alt="Cook">
+      <h3>Experienced Cooks</h3>
+      <p>Hire home or restaurant cooks with verified backgrounds.</p>
+    </div>
+    <div class="service-box">
+      <img src="https://cdn-icons-png.flaticon.com/512/6193/6193610.png" alt="Cleaner">
+      <h3>Housekeepers</h3>
+      <p>Trained cleaning staff for homes, offices and events.</p>
+    </div>
+    <div class="service-box">
+      <img src="https://cdn-icons-png.flaticon.com/512/2913/2913465.png" alt="Waiter">
+      <h3>Waiters & Event Staff</h3>
+      <p>On-demand waiters and helpers for restaurants or functions.</p>
+    </div>
+  </div>
+</section>
+
+<section class="cta-note">
+  <h2 class="section-title">Unlock Full Access</h2>
+  <p>Pay ₹500 to unlock full staff details & contact options. One profile preview is free.</p>
+  <button class="cta-btn">Pay & Unlock</button>
+</section>
+
+<section id="testimonials" class="testimonials">
+  <h2 class="section-title">What Our Clients Say</h2>
+  <div class="testimonial">
+    <h4>Ramesh Patel</h4>
+    <p>"I found a cook for my café in just 2 days. Super easy & professional service!"</p>
+  </div>
+  <div class="testimonial">
+    <h4>Preeti Sinha</h4>
+    <p>"Booked a housekeeper for my parents — trustworthy and polite!"</p>
+  </div>
+</section>
+
+<footer id="contact">
+  <p>Contact us: support@arpaservice.in | +91 90000 00000</p>
+  <p>Follow us on Instagram | Facebook</p>
+  <p>&copy; 2025 Arpa Service. All rights reserved.</p>
+</footer>
 
 </body>
 </html>
