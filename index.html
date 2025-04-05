@@ -1,147 +1,173 @@
-<!DOCTYPE html><html lang="en"><head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Arpa Service – Premium Staff Solutions</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
+  <title>Arpa Service</title>
   <style>
     body {
-      font-family: 'Poppins', sans-serif;
       margin: 0;
-      padding: 0;
-      background: #f4f4f8;
-      color: #333;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f5f9ff;
+      color: #1f3c88;
     }
     header {
-      background: #1a1a2e;
+      background: #1f3c88;
       color: white;
-      padding: 2rem;
+      padding: 1.5rem 2rem;
       text-align: center;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2.5rem;
     }
     nav {
-      background: #16213e;
+      background: #ffffff;
+      padding: 0.8rem 2rem;
       text-align: center;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
     nav a {
-      color: white;
-      padding: 1rem 1.5rem;
-      display: inline-block;
+      margin: 0 15px;
       text-decoration: none;
+      color: #1f3c88;
+      font-weight: 600;
     }
     .hero {
-      background: url('https://source.unsplash.com/1600x600/?restaurant,kitchen') no-repeat center center/cover;
-      color: white;
-      padding: 5rem 2rem;
+      padding: 3rem 2rem;
       text-align: center;
+      background: linear-gradient(to right, #e0f0ff, #ffffff);
     }
-    .hero h2 {
+    .hero h1 {
       font-size: 3rem;
       margin-bottom: 1rem;
     }
-    section {
-      padding: 4rem 2rem;
-      max-width: 1200px;
+    .section {
+      padding: 3rem 2rem;
+      max-width: 1000px;
       margin: auto;
     }
-    section h3 {
-      text-align: center;
-      margin-bottom: 2rem;
-      color: #222;
+    .section h2 {
+      margin-bottom: 1rem;
+      color: #1f3c88;
     }
-    .services, .reviews {
+    .card-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 2rem;
+      gap: 1.5rem;
     }
     .card {
       background: white;
-      padding: 2rem;
+      padding: 1rem;
       border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      text-align: center;
     }
-    .card h4 {
-      margin-top: 0;
-      color: #1a1a2e;
+    .card img {
+      max-width: 100%;
+      border-radius: 10px;
+    }
+    .review {
+      background: white;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      border-left: 4px solid #1f3c88;
     }
     .cta {
-      text-align: center;
-      margin-top: 3rem;
-    }
-    .cta a {
-      background: #1a1a2e;
-      color: white;
-      padding: 1rem 2rem;
-      border-radius: 5px;
-      text-decoration: none;
-    }
-    footer {
-      background: #0f3460;
+      background: #1f3c88;
       color: white;
       padding: 2rem;
       text-align: center;
     }
+    .cta button {
+      padding: 10px 20px;
+      font-size: 1rem;
+      background: white;
+      color: #1f3c88;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    footer {
+      background: #f0f0f0;
+      padding: 1rem;
+      text-align: center;
+      font-size: 0.9rem;
+    }
   </style>
-</head><body>
+</head>
+<body>
+
   <header>
     <h1>Arpa Service</h1>
-    <p>Professional Waiters, Cooks & Hospitality Staff</p>
-  </header>  <nav>
-    <a href="#about">About Us</a>
+    <p>Your trusted partner for hospitality staff like cooks, waiters & cleaners</p>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#mission">Mission</a>
     <a href="#services">Services</a>
-    <a href="#mission">Our Mission</a>
     <a href="#reviews">Reviews</a>
     <a href="#contact">Contact</a>
-  </nav>  <div class="hero">
-    <h2>Elevate Your Restaurant Experience</h2>
-    <p>Hire premium staff quickly and securely through Arpa Service.</p>
-  </div>  <section id="about">
-    <h3>About Us</h3>
-    <p>We are Gujarat's leading staffing solution for restaurants and hotels. With years of experience, Arpa Service delivers only the best cooks, waiters, and service staff to ensure premium hospitality.</p>
-  </section>  <section id="mission">
-    <h3>Our Mission</h3>
-    <p>To revolutionize hospitality hiring by providing highly skilled, trained, and verified staff members that empower businesses to serve better and grow faster.</p>
-  </section>  <section id="services">
-    <h3>Our Services</h3>
-    <div class="services">
+  </nav>
+
+  <div class="hero">
+    <h1>Hire Professional Hospitality Staff Easily</h1>
+    <p>Get skilled cooks, waiters, and cleaners delivered to your restaurant or hotel fast.</p>
+  </div>
+
+  <section class="section" id="about">
+    <h2>About Us</h2>
+    <p>We are Arpa Service, serving restaurants, hotels, and events with skilled staff since 2020. Trusted by 150+ businesses across India.</p>
+  </section>
+
+  <section class="section" id="mission">
+    <h2>Our Mission</h2>
+    <p>To provide reliable, on-demand hospitality staff for restaurants and hotels with utmost trust, speed, and professionalism.</p>
+  </section>
+
+  <section class="section" id="services">
+    <h2>Our Services</h2>
+    <div class="card-grid">
       <div class="card">
-        <h4>Waiters</h4>
-        <p>Experienced, professional, and well-mannered waiters for any scale of service.</p>
+        <img src="https://via.placeholder.com/300x200?text=Cook" alt="Cook" />
+        <h3>Cook</h3>
+        <p>Hire expert chefs and cooks for Indian, Chinese, and more cuisines.</p>
       </div>
       <div class="card">
-        <h4>Cooks</h4>
-        <p>Multicuisine cooks with verified background and excellent reviews.</p>
+        <img src="https://via.placeholder.com/300x200?text=Waiter" alt="Waiter" />
+        <h3>Waiter</h3>
+        <p>Trained waiters for your restaurant or event.</p>
       </div>
       <div class="card">
-        <h4>Kitchen Help</h4>
-        <p>Reliable support staff to keep your kitchen running smoothly.</p>
-      </div>
-    </div>
-  </section>  <section id="reviews">
-    <h3>What Our Clients Say</h3>
-    <div class="reviews">
-      <div class="card">
-        <p>“Arpa Service helped us staff a new restaurant in 3 days. Incredible support!”</p>
-        <strong>- Mr. Sharma, Hotel Crown</strong>
-      </div>
-      <div class="card">
-        <p>“Their staff is punctual and professional. Great value for money.”</p>
-        <strong>- Ms. Jain, Café Mocha</strong>
-      </div>
-      <div class="card">
-        <p>“500 rupees well spent to unlock a great hire. Highly recommend.”</p>
-        <strong>- Rajiv M., Raj Restaurant</strong>
+        <img src="https://via.placeholder.com/300x200?text=Cleaner" alt="Cleaner" />
+        <h3>Cleaner</h3>
+        <p>Professional cleaning staff for restaurants and hotels.</p>
       </div>
     </div>
-  </section>  <section id="contact">
-    <h3>Contact Us</h3>
-    <p>Want to hire or know more? Call us at <strong>+91-98765-43210</strong> or email <strong>arpaservice@gmail.com</strong></p>
-    <div class="cta">
-      <a href="#">Unlock Full Access for ₹500</a>
+  </section>
+
+  <section class="section" id="reviews">
+    <h2>What Our Clients Say</h2>
+    <div class="review">
+      “Arpa Service helped us find reliable kitchen staff in 24 hours. Highly recommended!” – Fake Client 1
     </div>
-  </section>  <footer>
-    <p>&copy; 2025 Arpa Service | Designed with premium UI/UX for hospitality hiring</p>
+    <div class="review">
+      “We’ve been using Arpa Service for months. Cleaners are punctual and efficient.” – Fake Client 2
+    </div>
+  </section>
+
+  <section class="cta">
+    <h2>Unlock Full Staff Profiles for Just ₹500</h2>
+    <p>Pay once to access contact details and full resumes of cooks, waiters, and cleaners.</p>
+    <button onclick="alert('Payment gateway coming soon!')">Unlock Now</button>
+  </section>
+
+  <section class="section" id="contact">
+    <h2>Contact Us</h2>
+    <p>Email: info@arpaservice.in</p>
+    <p>Phone: +91-9876543210</p>
+  </section>
+
+  <footer>
+    &copy; 2025 Arpa Service. All rights reserved.
   </footer>
-</body></html>
+
+</body>
+  </html>
