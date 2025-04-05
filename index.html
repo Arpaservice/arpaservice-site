@@ -2,156 +2,134 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ArpaService - Home</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <title>ArpaService - Hire Verified Staff</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Roboto', sans-serif;
-    }
-    body {
-      line-height: 1.6;
-      background-color: #f9f9f9;
-      color: #333;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+    body { background: #f5f5f5; color: #333; }
     header {
-      background: url('https://source.unsplash.com/1600x600/?cleaning,housekeeping') center/cover no-repeat;
+      background: url('https://images.unsplash.com/photo-1527689368864-3a821dbccc34?auto=format&fit=crop&w=1470&q=80') center/cover;
       height: 80vh;
-      color: white;
       display: flex;
+      flex-direction: column;
+      justify-content: center;
       align-items: center;
-      justify-content: center;
+      color: white;
       text-align: center;
-      padding: 20px;
     }
-    header h1 {
-      font-size: 3em;
-      background-color: rgba(0,0,0,0.6);
-      padding: 20px;
-      border-radius: 10px;
-    }
-    nav {
-      background: #333;
+    header h1 { font-size: 3rem; font-weight: 700; }
+    header p { font-size: 1.2rem; margin: 20px 0; }
+    header a {
+      background: #ff6600;
       color: white;
-      display: flex;
-      justify-content: center;
-      padding: 15px;
-    }
-    nav a {
-      color: white;
+      padding: 12px 30px;
+      border-radius: 30px;
       text-decoration: none;
-      margin: 0 15px;
       font-weight: bold;
     }
-    section {
-      padding: 60px 20px;
-      max-width: 1100px;
-      margin: auto;
+    section.services {
+      padding: 40px 20px;
+      background: white;
+      text-align: center;
     }
-    .services, .features {
+    .services h2 { font-size: 2rem; margin-bottom: 30px; }
+    .card-container {
       display: flex;
-      flex-wrap: wrap;
-      gap: 30px;
       justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
     }
     .card {
-      background: white;
-      border-radius: 10px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      background: #fafafa;
       padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
       width: 250px;
-      text-align: center;
     }
     .card img {
-      width: 60px;
-      margin-bottom: 15px;
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 10px;
     }
-    .unlock {
+    .card h3 { margin: 15px 0 10px; }
+    .why-us {
+      padding: 40px 20px;
+      background: #f0f8ff;
+    }
+    .why-us h2 {
       text-align: center;
-      margin-top: 40px;
+      margin-bottom: 30px;
     }
-    .unlock button {
-      background-color: #28a745;
-      color: white;
-      padding: 15px 30px;
-      border: none;
-      border-radius: 5px;
-      font-size: 1em;
-      cursor: pointer;
+    .features {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .feature {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      width: 220px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      text-align: center;
     }
     footer {
-      background: #333;
+      background: #222;
       color: white;
       text-align: center;
-      padding: 30px 20px;
-      margin-top: 40px;
+      padding: 20px 0;
     }
-    footer a {
-      color: #fff;
-      text-decoration: underline;
+    .contact-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #25D366;
+      color: white;
+      padding: 15px 20px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Welcome to ArpaService - Your Housekeeping Partner</h1>
-  </header>
-  <nav>
-    <a href="#services">Services</a>
-    <a href="#why">Why Us</a>
-    <a href="#contact">Contact</a>
-    <a href="#unlock">Unlock</a>
-  </nav>  <section id="services">
-    <h2 style="text-align:center; margin-bottom: 30px;">Our Services</h2>
-    <div class="services">
+    <h1>Hire Verified Staff for Your Business</h1>
+    <p>Waiters | Cooks | Captains | Managers & more</p>
+    <a href="#services">Explore Services</a>
+  </header>  <section class="services" id="services">
+    <h2>Our Services</h2>
+    <div class="card-container">
       <div class="card">
-        <img src="https://cdn-icons-png.flaticon.com/512/1046/1046784.png" />
+        <img src="https://source.unsplash.com/250x150/?waiter" alt="Waiter">
         <h3>Waiters</h3>
+        <p>Professional and well-trained wait staff for your hotel or event.</p>
       </div>
       <div class="card">
-        <img src="https://cdn-icons-png.flaticon.com/512/135/135620.png" />
-        <h3>Captains</h3>
-      </div>
-      <div class="card">
-        <img src="https://cdn-icons-png.flaticon.com/512/2922/2922510.png" />
-        <h3>Managers</h3>
-      </div>
-      <div class="card">
-        <img src="https://cdn-icons-png.flaticon.com/512/1995/1995574.png" />
+        <img src="https://source.unsplash.com/250x150/?cook" alt="Cook">
         <h3>Cooks</h3>
+        <p>Experienced cooks ready to serve delicious dishes to your guests.</p>
+      </div>
+      <div class="card">
+        <img src="https://source.unsplash.com/250x150/?restaurant-manager" alt="Manager">
+        <h3>Managers</h3>
+        <p>Reliable and efficient management for smooth operations.</p>
       </div>
     </div>
-  </section>  <section id="why">
-    <h2 style="text-align:center; margin-bottom: 30px;">Why Choose ArpaService?</h2>
+  </section>  <section class="why-us">
+    <h2>Why Choose ArpaService?</h2>
     <div class="features">
-      <div class="card">
-        <h3>Verified Staff</h3>
-        <p>All workers are background checked and verified.</p>
-      </div>
-      <div class="card">
-        <h3>Trusted by 500+ Clients</h3>
-        <p>We serve homes, offices, hotels and more.</p>
-      </div>
-      <div class="card">
-        <h3>Easy Booking</h3>
-        <p>Book any service online or via phone in minutes.</p>
-      </div>
-    </div>
-  </section>  <section id="unlock" class="unlock">
-    <h2>Want Full Access to Worker Data?</h2>
-    <p>Unlock all contact details and download options for ₹500</p>
-    <button>Pay & Unblock Now</button>
-  </section>  <section id="contact">
-    <h2 style="text-align:center; margin-bottom: 30px;">Contact Us</h2>
-    <div style="text-align: center;">
-      <p>Email: info@arpaservice.in</p>
-      <p>Phone: +91-90000-00000</p>
+      <div class="feature">Verified & Trusted Staff</div>
+      <div class="feature">PAN India Coverage</div>
+      <div class="feature">Low Charges</div>
+      <div class="feature">24/7 Support</div>
     </div>
   </section>  <footer>
     <p>&copy; 2025 ArpaService. All rights reserved.</p>
-    <p><a href="#">Terms & Conditions</a> | <a href="#">Privacy Policy</a></p>
-  </footer>
+  </footer><a href="https://wa.me/919999999999" class="contact-btn">Contact Us</a>
+
 </body>
 </html>
