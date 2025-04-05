@@ -1,194 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Arpa Service</title>
-  <style>
-    body {
-      font-family: 'Arial', sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f4f4f4;
-      color: #333;
-    }
-
-    header {
-      background-color: #1a1a2e;
-      color: white;
-      padding: 40px 20px;
-      text-align: center;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 45px;
-    }
-
-    .nav {
-      display: flex;
-      justify-content: center;
-      background-color: #1a1a2e;
-      padding: 10px;
-    }
-
-    .nav a {
-      color: white;
-      padding: 14px 25px;
-      text-decoration: none;
-      font-size: 18px;
-      margin: 0 15px;
-      border-radius: 5px;
-    }
-
-    .nav a:hover {
-      background-color: #ff6347;
-    }
-
-    section {
-      max-width: 1200px;
-      margin: 40px auto;
-      padding: 20px;
-      background-color: #fff;
-      border-radius: 10px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    }
-
-    section h2 {
-      font-size: 32px;
-      text-align: center;
-      color: #1a1a2e;
-    }
-
-    section p {
-      font-size: 18px;
-      line-height: 1.6;
-      color: #555;
-      text-align: center;
-    }
-
-    .cta-btn {
-      display: block;
-      width: 200px;
-      margin: 40px auto;
-      padding: 15px;
-      text-align: center;
-      background-color: #ff6347;
-      color: white;
-      font-size: 18px;
-      border-radius: 5px;
-      text-decoration: none;
-    }
-
-    .cta-btn:hover {
-      background-color: #e5533c;
-    }
-
-    .footer {
-      background-color: #1a1a2e;
-      color: white;
-      text-align: center;
-      padding: 20px;
-      margin-top: 40px;
-    }
-
-    .services-grid {
-      display: flex;
-      justify-content: space-around;
-      flex-wrap: wrap;
-      gap: 20px;
-    }
-
-    .service-item {
-      background-color: #f8f8f8;
-      padding: 20px;
-      text-align: center;
-      border-radius: 10px;
-      width: 280px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    }
-
-    .service-item img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-      border-radius: 8px;
-    }
-
-    .service-item h3 {
-      color: #1a1a2e;
-      margin-top: 10px;
-      font-size: 22px;
-    }
-
-    .service-item p {
-      font-size: 16px;
-      color: #666;
-    }
-
-    @media (max-width: 768px) {
-      .services-grid {
-        flex-direction: column;
-        align-items: center;
-      }
-    }
-
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ArpaService - Premium Services</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 3em;
+        }
+        section.hero {
+            background: url('your-image.jpg') no-repeat center center/cover;
+            height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        }
+        section.hero h2 {
+            font-size: 2.5em;
+        }
+        section.about, section.services {
+            padding: 50px 20px;
+            text-align: center;
+        }
+        section.about h2, section.services h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        section.services .service {
+            display: inline-block;
+            width: 30%;
+            margin: 20px;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        footer a {
+            color: #f4f4f9;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
 
-  <header>
-    <h1>Welcome to Arpa Service</h1>
-    <p>Your trusted partner for restaurant staffing solutions</p>
-  </header>
+    <header>
+        <h1>ArpaService</h1>
+        <p>Your premium solution for quality service providers</p>
+    </header>
 
-  <div class="nav">
-    <a href="#about">About Us</a>
-    <a href="#mission">Our Mission</a>
-    <a href="#services">Our Services</a>
-    <a href="#contact">Contact Us</a>
-  </div>
+    <section class="hero">
+        <div>
+            <h2>Welcome to ArpaService</h2>
+            <p>We provide skilled, reliable, and verified service providers for all your needs</p>
+        </div>
+    </section>
 
-  <section id="about">
-    <h2>About Us</h2>
-    <p>Arpa Service is a trusted provider of skilled workers for restaurants, hotels, and other hospitality businesses. We offer a range of services including waiters, cooks, cleaners, and other essential staff. Our mission is to help businesses meet their staffing needs with reliable, experienced professionals.</p>
-  </section>
+    <section class="about">
+        <h2>About Us</h2>
+        <p>At ArpaService, we connect businesses with professional service providers such as cooks, waiters, and cleaners. Our aim is to ensure quality, timely service with verified professionals who are highly trained to meet your needs.</p>
+    </section>
 
-  <section id="mission">
-    <h2>Our Mission</h2>
-    <p>At Arpa Service, our goal is to streamline the hiring process for hospitality businesses by connecting them with skilled and verified workers. We aim to provide businesses with a seamless staffing solution, ensuring that they can focus on delivering great service to their customers.</p>
-  </section>
+    <section class="services">
+        <h2>Our Services</h2>
+        <div class="service">
+            <h3>Waiters</h3>
+            <p>Our waiters are well-trained and experienced to provide exceptional service at your restaurant or event.</p>
+        </div>
+        <div class="service">
+            <h3>Cooks</h3>
+            <p>We offer expert cooks specializing in various cuisines, ensuring delicious and timely food preparation.</p>
+        </div>
+        <div class="service">
+            <h3>Housekeeping</h3>
+            <p>Our housekeeping staff are efficient, reliable, and well-trained to keep your spaces spotless.</p>
+        </div>
+    </section>
 
-  <section id="services">
-    <h2>Our Services</h2>
-    <div class="services-grid">
-      <div class="service-item">
-        <img src="https://via.placeholder.com/280x200" alt="Waiters">
-        <h3>Waiters</h3>
-        <p>Skilled waiters to serve your customers with professionalism.</p>
-      </div>
-      <div class="service-item">
-        <img src="https://via.placeholder.com/280x200" alt="Cooks">
-        <h3>Cooks</h3>
-        <p>Experienced cooks who deliver quality dishes every time.</p>
-      </div>
-      <div class="service-item">
-        <img src="https://via.placeholder.com/280x200" alt="Cleaners">
-        <h3>Cleaners</h3>
-        <p>Reliable cleaners to maintain a clean and hygienic environment.</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="cta">
-    <h2>Unlock Full Access</h2>
-    <p>For just ₹500, unlock all our worker data and get complete access to our services for your restaurant.</p>
-    <a href="#" class="cta-btn">Pay ₹500 to Unlock</a>
-  </section>
-
-  <footer class="footer">
-    <p>&copy; 2025 Arpa Service. All Rights Reserved.</p>
-  </footer>
+    <footer>
+        <p>&copy; 2025 ArpaService. All rights reserved. | <a href="#">Contact Us</a></p>
+    </footer>
 
 </body>
 </html>
