@@ -1,73 +1,144 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Arpa Services</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ARPA Services</title>
   <style>
     body {
+      margin: 0;
       font-family: Arial, sans-serif;
-      margin: 0; padding: 0;
-      background: #f4f4f4;
-      color: #333;
+      background-color: #f7f7f7;
     }
     header {
-      background: #008080;
-      color: #fff;
-      padding: 1rem;
+      background-color: #2c3e50;
+      color: white;
+      padding: 20px;
       text-align: center;
     }
     nav {
-      display: flex;
-      justify-content: center;
-      background: #006666;
+      background-color: #34495e;
+      overflow: hidden;
     }
     nav a {
+      float: left;
+      display: block;
       color: white;
-      padding: 1rem;
+      text-align: center;
+      padding: 14px 16px;
       text-decoration: none;
-      display: inline-block;
     }
     nav a:hover {
-      background: #004d4d;
+      background-color: #1abc9c;
+      color: white;
     }
-    main {
-      padding: 2rem;
+    .section {
+      padding: 20px;
       text-align: center;
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+    .card {
+      background-color: white;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      transition: transform 0.2s;
+    }
+    .card:hover {
+      transform: scale(1.02);
     }
     footer {
-      background: #222;
-      color: #aaa;
-      text-align: center;
-      padding: 1rem;
-      position: fixed;
-      bottom: 0;
-      width: 100%;
-    }
-    .btn {
-      background: #008080;
+      background-color: #2c3e50;
       color: white;
-      padding: 0.75rem 1.5rem;
-      margin: 1rem;
-      border: none;
-      cursor: pointer;
-      text-decoration: none;
-      border-radius: 5px;
-      display: inline-block;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
     }
-    .btn:hover {
-      background: #005f5f;
+    .contact-form {
+      background: white;
+      max-width: 500px;
+      margin: auto;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    .contact-form input, .contact-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .contact-form button {
+      padding: 10px 20px;
+      background: #1abc9c;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Welcome to Arpa Services</h1>
-    <p>Your trusted staff provider</p>
+    <h1>ARPA Services</h1>
+    <p>Your trusted partner for hospitality staffing</p>
   </header>
-
   <nav>
+    <a href="Index.html">Home</a>
     <a href="Waiters.html">Waiters</a>
     <a href="Cooks.html">Cooks</a>
     <a href="Captain.html">Captains</a>
-    <
+    <a href="MANAGER.html">Managers</a>
+    <a href="#contact">Contact</a>
+  </nav>  <section class="section">
+    <h2>Our Services</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Waiters</h3>
+        <p>Trained and professional wait staff for your events and businesses.</p>
+        <a href="Waiters.html">View Waiters</a>
+      </div>
+      <div class="card">
+        <h3>Cooks</h3>
+        <p>Specialized cooks in various cuisines for all culinary needs.</p>
+        <a href="Cooks.html">View Cooks</a>
+      </div>
+      <div class="card">
+        <h3>Captains</h3>
+        <p>Experienced captains to manage your hospitality staff.</p>
+        <a href="Captain.html">View Captains</a>
+      </div>
+      <div class="card">
+        <h3>Managers</h3>
+        <p>Efficient managers to oversee operations and ensure service quality.</p>
+        <a href="MANAGER.html">View Managers</a>
+      </div>
+    </div>
+  </section>  <section id="contact" class="section">
+    <h2>Contact Us</h2>
+    <div class="contact-form">
+      <form>
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <textarea placeholder="Your Message" rows="5" required></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </div>
+  </section>  <footer>
+    <p>&copy; 2025 ARPA Services. All rights reserved.</p>
+    <p>
+      <a href="Index.html" style="color: white;">Home</a> |
+      <a href="Waiters.html" style="color: white;">Waiters</a> |
+      <a href="Cooks.html" style="color: white;">Cooks</a> |
+      <a href="Captain.html" style="color: white;">Captains</a> |
+      <a href="MANAGER.html" style="color: white;">Managers</a>
+    </p>
+  </footer>
+</body>
+      </html>
