@@ -3,97 +3,192 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Arpa Service – Premium Hospitality Staffing</title>
+  <title>Arpa Service</title>
   <style>
-    body { margin: 0; font-family: 'Segoe UI', sans-serif; line-height: 1.6; background-color: #f9f9f9; color: #333; }
-    header { background-color: #111; color: #fff; padding: 20px 40px; display: flex; justify-content: space-between; align-items: center; }
-    header h1 { margin: 0; font-size: 1.8em; }
-    nav a { color: #fff; margin-left: 20px; text-decoration: none; font-weight: 500; }
-    .hero { background: url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5') center/cover no-repeat; color: white; padding: 100px 40px; text-align: center; }
-    .hero h2 { font-size: 3em; margin-bottom: 10px; }
-    .hero p { font-size: 1.2em; margin-bottom: 30px; }
-    .btn { background-color: #ff5722; color: white; padding: 12px 25px; border: none; border-radius: 5px; text-decoration: none; font-size: 1em; }
-    section { padding: 60px 40px; max-width: 1000px; margin: auto; }
-    .section-title { text-align: center; font-size: 2em; margin-bottom: 30px; }
-    .services, .reviews { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
-    .card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); text-align: center; }
-    .card img { width: 100%; height: 180px; object-fit: cover; border-radius: 6px; }
-    .footer { background: #111; color: #aaa; text-align: center; padding: 20px; margin-top: 40px; }
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    header {
+      background-color: #1a1a2e;
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 45px;
+    }
+
+    .nav {
+      display: flex;
+      justify-content: center;
+      background-color: #1a1a2e;
+      padding: 10px;
+    }
+
+    .nav a {
+      color: white;
+      padding: 14px 25px;
+      text-decoration: none;
+      font-size: 18px;
+      margin: 0 15px;
+      border-radius: 5px;
+    }
+
+    .nav a:hover {
+      background-color: #ff6347;
+    }
+
+    section {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    section h2 {
+      font-size: 32px;
+      text-align: center;
+      color: #1a1a2e;
+    }
+
+    section p {
+      font-size: 18px;
+      line-height: 1.6;
+      color: #555;
+      text-align: center;
+    }
+
+    .cta-btn {
+      display: block;
+      width: 200px;
+      margin: 40px auto;
+      padding: 15px;
+      text-align: center;
+      background-color: #ff6347;
+      color: white;
+      font-size: 18px;
+      border-radius: 5px;
+      text-decoration: none;
+    }
+
+    .cta-btn:hover {
+      background-color: #e5533c;
+    }
+
+    .footer {
+      background-color: #1a1a2e;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    .services-grid {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .service-item {
+      background-color: #f8f8f8;
+      padding: 20px;
+      text-align: center;
+      border-radius: 10px;
+      width: 280px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .service-item img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .service-item h3 {
+      color: #1a1a2e;
+      margin-top: 10px;
+      font-size: 22px;
+    }
+
+    .service-item p {
+      font-size: 16px;
+      color: #666;
+    }
+
+    @media (max-width: 768px) {
+      .services-grid {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+
   </style>
 </head>
 <body>
 
   <header>
-    <h1>Arpa Service</h1>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#services">Services</a>
-      <a href="#reviews">Reviews</a>
-      <a href="#contact">Contact</a>
-    </nav>
+    <h1>Welcome to Arpa Service</h1>
+    <p>Your trusted partner for restaurant staffing solutions</p>
   </header>
 
-  <section class="hero">
-    <h2>Your Trusted Partner in Hospitality Staffing</h2>
-    <p>Providing experienced and reliable waiters, cooks, and captains for restaurants and events.</p>
-    <a href="#contact" class="btn">Contact Us</a>
-  </section>
+  <div class="nav">
+    <a href="#about">About Us</a>
+    <a href="#mission">Our Mission</a>
+    <a href="#services">Our Services</a>
+    <a href="#contact">Contact Us</a>
+  </div>
 
   <section id="about">
-    <h2 class="section-title">About Us</h2>
-    <p style="text-align: center;">Arpa Service is dedicated to connecting hospitality businesses with trained professionals. Whether you need staff for a day or long-term, we’re here to support your success.</p>
-    <p style="text-align: center;"><strong>Our Mission:</strong> To simplify staffing for restaurants and ensure excellence in service.</p>
-    <p style="text-align: center;"><strong>Our Target:</strong> Restaurants, Cafes, Banquet Halls, Events & Caterers across India.</p>
+    <h2>About Us</h2>
+    <p>Arpa Service is a trusted provider of skilled workers for restaurants, hotels, and other hospitality businesses. We offer a range of services including waiters, cooks, cleaners, and other essential staff. Our mission is to help businesses meet their staffing needs with reliable, experienced professionals.</p>
+  </section>
+
+  <section id="mission">
+    <h2>Our Mission</h2>
+    <p>At Arpa Service, our goal is to streamline the hiring process for hospitality businesses by connecting them with skilled and verified workers. We aim to provide businesses with a seamless staffing solution, ensuring that they can focus on delivering great service to their customers.</p>
   </section>
 
   <section id="services">
-    <h2 class="section-title">Our Services</h2>
-    <div class="services">
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38" alt="Waiters">
+    <h2>Our Services</h2>
+    <div class="services-grid">
+      <div class="service-item">
+        <img src="https://via.placeholder.com/280x200" alt="Waiters">
         <h3>Waiters</h3>
-        <p>Professional, well-groomed wait staff trained in service and etiquette.</p>
+        <p>Skilled waiters to serve your customers with professionalism.</p>
       </div>
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1606788075761-734c20b7f3f4" alt="Cooks">
+      <div class="service-item">
+        <img src="https://via.placeholder.com/280x200" alt="Cooks">
         <h3>Cooks</h3>
-        <p>Skilled chefs and kitchen staff available for all types of cuisines and events.</p>
+        <p>Experienced cooks who deliver quality dishes every time.</p>
       </div>
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1614741118887-b3d74e98b3c2" alt="Captains">
-        <h3>Captains</h3>
-        <p>Experienced team leaders to manage your restaurant floor and events smoothly.</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="reviews">
-    <h2 class="section-title">What Our Clients Say</h2>
-    <div class="reviews">
-      <div class="card">
-        <p>"Arpa Service saved our restaurant launch. Their staff was punctual and professional!"</p>
-        <strong>- Mumba Kitchen</strong>
-      </div>
-      <div class="card">
-        <p>"Highly recommend! We hired 4 waiters and 2 cooks for our catering gig – top-notch."</p>
-        <strong>- Ahmedabad Events</strong>
-      </div>
-      <div class="card">
-        <p>"Reliable team, polite staff. Will use again for our festival stall."</p>
-        <strong>- Delhi FoodFest</strong>
+      <div class="service-item">
+        <img src="https://via.placeholder.com/280x200" alt="Cleaners">
+        <h3>Cleaners</h3>
+        <p>Reliable cleaners to maintain a clean and hygienic environment.</p>
       </div>
     </div>
   </section>
 
-  <section id="contact" style="text-align: center;">
-    <h2 class="section-title">Contact Us</h2>
-    <p>Ready to hire professionals for your business?</p>
-    <a href="mailto:arpaservice.in@gmail.com" class="btn">Email Us Now</a>
+  <section id="cta">
+    <h2>Unlock Full Access</h2>
+    <p>For just ₹500, unlock all our worker data and get complete access to our services for your restaurant.</p>
+    <a href="#" class="cta-btn">Pay ₹500 to Unlock</a>
   </section>
 
-  <div class="footer">
-    &copy; 2025 Arpa Service. All rights reserved.
-  </div>
+  <footer class="footer">
+    <p>&copy; 2025 Arpa Service. All Rights Reserved.</p>
+  </footer>
 
 </body>
 </html>
