@@ -1,135 +1,177 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ArpaService - Hire Verified Staff</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Arpa Service</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
-    body { background: #f5f5f5; color: #333; }
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #fffdf9;
+      color: #333;
+    }
     header {
-      background: url('https://images.unsplash.com/photo-1527689368864-3a821dbccc34?auto=format&fit=crop&w=1470&q=80') center/cover;
-      height: 80vh;
+      background-color: #121212;
+      color: white;
+      padding: 1rem 2rem;
       display: flex;
-      flex-direction: column;
-      justify-content: center;
+      justify-content: space-between;
       align-items: center;
-      color: white;
-      text-align: center;
     }
-    header h1 { font-size: 3rem; font-weight: 700; }
-    header p { font-size: 1.2rem; margin: 20px 0; }
-    header a {
-      background: #ff6600;
+    header h1 {
+      font-size: 1.8rem;
+      margin: 0;
+    }
+    nav a {
       color: white;
-      padding: 12px 30px;
-      border-radius: 30px;
+      margin-left: 2rem;
       text-decoration: none;
-      font-weight: bold;
+      font-weight: 500;
     }
-    section.services {
-      padding: 40px 20px;
-      background: white;
-      text-align: center;
-    }
-    .services h2 { font-size: 2rem; margin-bottom: 30px; }
-    .card-container {
+    .hero {
+      background: url('https://images.unsplash.com/photo-1556905055-8f358a7a47b2') center/cover no-repeat;
+      height: 70vh;
       display: flex;
+      align-items: center;
       justify-content: center;
-      flex-wrap: wrap;
-      gap: 20px;
+      text-align: center;
+      color: white;
+    }
+    .hero h2 {
+      background: rgba(0, 0, 0, 0.6);
+      padding: 1.5rem;
+      font-size: 2.5rem;
+      border-radius: 10px;
+    }
+    .section {
+      padding: 4rem 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .section h3 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #d35400;
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
     }
     .card {
-      background: #fafafa;
-      padding: 20px;
+      background: #f7f7f7;
+      padding: 1.5rem;
       border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      width: 250px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
     }
     .card img {
-      width: 100%;
-      height: 150px;
+      max-width: 100%;
+      height: 160px;
       object-fit: cover;
-      border-radius: 10px;
+      border-radius: 8px;
     }
-    .card h3 { margin: 15px 0 10px; }
-    .why-us {
-      padding: 40px 20px;
-      background: #f0f8ff;
+    .card h4 {
+      margin: 1rem 0 0.5rem;
     }
-    .why-us h2 {
-      text-align: center;
-      margin-bottom: 30px;
-    }
-    .features {
-      display: flex;
-      justify-content: space-around;
-      flex-wrap: wrap;
-      gap: 20px;
-    }
-    .feature {
-      background: white;
-      padding: 20px;
-      border-radius: 10px;
-      width: 220px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-      text-align: center;
+    .button {
+      margin-top: 1rem;
+      display: inline-block;
+      background: #e67e22;
+      color: white;
+      padding: 0.7rem 1.5rem;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 600;
     }
     footer {
-      background: #222;
+      background: #121212;
       color: white;
+      padding: 2rem;
       text-align: center;
-      padding: 20px 0;
-    }
-    .contact-btn {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: #25D366;
-      color: white;
-      padding: 15px 20px;
-      border-radius: 50px;
-      text-decoration: none;
-      font-weight: bold;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      margin-top: 4rem;
     }
   </style>
 </head>
 <body>
+
   <header>
-    <h1>Hire Verified Staff for Your Business</h1>
-    <p>Waiters | Cooks | Captains | Managers & more</p>
-    <a href="#services">Explore Services</a>
-  </header>  <section class="services" id="services">
-    <h2>Our Services</h2>
-    <div class="card-container">
+    <h1>Arpa Service</h1>
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <div class="hero">
+    <h2>Your trusted partner for quality restaurant staff</h2>
+  </div>
+
+  <section id="services" class="section">
+    <h3>Our Services</h3>
+    <div class="cards">
       <div class="card">
-        <img src="https://source.unsplash.com/250x150/?waiter" alt="Waiter">
-        <h3>Waiters</h3>
-        <p>Professional and well-trained wait staff for your hotel or event.</p>
+        <img src="https://images.unsplash.com/photo-1551218808-94e220e084d2" alt="Waiters">
+        <h4>Waiters</h4>
+        <p>Trained and professional waiters ready to serve.</p>
+        <a href="Waiters.html" class="button">View Details</a>
       </div>
       <div class="card">
-        <img src="https://source.unsplash.com/250x150/?cook" alt="Cook">
-        <h3>Cooks</h3>
-        <p>Experienced cooks ready to serve delicious dishes to your guests.</p>
+        <img src="https://images.unsplash.com/photo-1600891963935-97fe2d92bfee" alt="Cooks">
+        <h4>Cooks</h4>
+        <p>Skilled cooks for all cuisines and service types.</p>
+        <a href="Cooks.html" class="button">View Details</a>
       </div>
       <div class="card">
-        <img src="https://source.unsplash.com/250x150/?restaurant-manager" alt="Manager">
-        <h3>Managers</h3>
-        <p>Reliable and efficient management for smooth operations.</p>
+        <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9" alt="Captain">
+        <h4>Captains</h4>
+        <p>Experienced captains to manage your floor.</p>
+        <a href="Captain.html" class="button">View Details</a>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1604042286761-99c9d984de11" alt="Manager">
+        <h4>Managers</h4>
+        <p>Professional managers to lead your restaurant team.</p>
+        <a href="MANAGER.HTML" class="button">View Details</a>
       </div>
     </div>
-  </section>  <section class="why-us">
-    <h2>Why Choose ArpaService?</h2>
-    <div class="features">
-      <div class="feature">Verified & Trusted Staff</div>
-      <div class="feature">PAN India Coverage</div>
-      <div class="feature">Low Charges</div>
-      <div class="feature">24/7 Support</div>
+  </section>
+
+  <section id="about" class="section">
+    <h3>About Us</h3>
+    <p>Arpa Service is a leading hospitality staffing agency providing professional and reliable restaurant staff across India. Our mission is to match great talent with great restaurants, ensuring exceptional service every time.</p>
+    <h4>Our Mission</h4>
+    <p>To deliver qualified and well-trained professionals to elevate your hospitality business.</p>
+    <h4>Our Target</h4>
+    <p>To be India’s most trusted restaurant staffing brand.</p>
+  </section>
+
+  <section class="section">
+    <h3>What Our Clients Say</h3>
+    <div class="cards">
+      <div class="card">
+        <p>"Best service I've experienced. Highly recommended!"</p>
+        <strong>- Urban Bites</strong>
+      </div>
+      <div class="card">
+        <p>"Our restaurant staffing needs are always fulfilled seamlessly."</p>
+        <strong>- Royal Dine</strong>
+      </div>
     </div>
-  </section>  <footer>
-    <p>&copy; 2025 ArpaService. All rights reserved.</p>
-  </footer><a href="https://wa.me/919999999999" class="contact-btn">Contact Us</a>
+  </section>
+
+  <section id="contact" class="section">
+    <h3>Contact Us</h3>
+    <p>Ready to hire professionals? Get in touch today!</p>
+    <a href="mailto:contact@arpaservice.in" class="button">Contact Us</a>
+  </section>
+
+  <footer>
+    &copy; 2025 Arpa Service | All Rights Reserved
+  </footer>
 
 </body>
 </html>
