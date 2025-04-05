@@ -3,96 +3,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Arpa Service</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <title>Arpa Service – Premium Hospitality Staffing</title>
   <style>
-    body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background: #fffdf9;
-      color: #333;
-    }
-    header {
-      background-color: #121212;
-      color: white;
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    header h1 {
-      font-size: 1.8rem;
-      margin: 0;
-    }
-    nav a {
-      color: white;
-      margin-left: 2rem;
-      text-decoration: none;
-      font-weight: 500;
-    }
-    .hero {
-      background: url('https://images.unsplash.com/photo-1556905055-8f358a7a47b2') center/cover no-repeat;
-      height: 70vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      color: white;
-    }
-    .hero h2 {
-      background: rgba(0, 0, 0, 0.6);
-      padding: 1.5rem;
-      font-size: 2.5rem;
-      border-radius: 10px;
-    }
-    .section {
-      padding: 4rem 2rem;
-      max-width: 1000px;
-      margin: auto;
-    }
-    .section h3 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-      color: #d35400;
-    }
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 1.5rem;
-    }
-    .card {
-      background: #f7f7f7;
-      padding: 1.5rem;
-      border-radius: 12px;
-      text-align: center;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-    }
-    .card img {
-      max-width: 100%;
-      height: 160px;
-      object-fit: cover;
-      border-radius: 8px;
-    }
-    .card h4 {
-      margin: 1rem 0 0.5rem;
-    }
-    .button {
-      margin-top: 1rem;
-      display: inline-block;
-      background: #e67e22;
-      color: white;
-      padding: 0.7rem 1.5rem;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: 600;
-    }
-    footer {
-      background: #121212;
-      color: white;
-      padding: 2rem;
-      text-align: center;
-      margin-top: 4rem;
-    }
+    body { margin: 0; font-family: 'Segoe UI', sans-serif; line-height: 1.6; background-color: #f9f9f9; color: #333; }
+    header { background-color: #111; color: #fff; padding: 20px 40px; display: flex; justify-content: space-between; align-items: center; }
+    header h1 { margin: 0; font-size: 1.8em; }
+    nav a { color: #fff; margin-left: 20px; text-decoration: none; font-weight: 500; }
+    .hero { background: url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5') center/cover no-repeat; color: white; padding: 100px 40px; text-align: center; }
+    .hero h2 { font-size: 3em; margin-bottom: 10px; }
+    .hero p { font-size: 1.2em; margin-bottom: 30px; }
+    .btn { background-color: #ff5722; color: white; padding: 12px 25px; border: none; border-radius: 5px; text-decoration: none; font-size: 1em; }
+    section { padding: 60px 40px; max-width: 1000px; margin: auto; }
+    .section-title { text-align: center; font-size: 2em; margin-bottom: 30px; }
+    .services, .reviews { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+    .card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); text-align: center; }
+    .card img { width: 100%; height: 180px; object-fit: cover; border-radius: 6px; }
+    .footer { background: #111; color: #aaa; text-align: center; padding: 20px; margin-top: 40px; }
   </style>
 </head>
 <body>
@@ -100,78 +26,74 @@
   <header>
     <h1>Arpa Service</h1>
     <nav>
-      <a href="#services">Services</a>
       <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#reviews">Reviews</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
 
-  <div class="hero">
-    <h2>Your trusted partner for quality restaurant staff</h2>
+  <section class="hero">
+    <h2>Your Trusted Partner in Hospitality Staffing</h2>
+    <p>Providing experienced and reliable waiters, cooks, and captains for restaurants and events.</p>
+    <a href="#contact" class="btn">Contact Us</a>
+  </section>
+
+  <section id="about">
+    <h2 class="section-title">About Us</h2>
+    <p style="text-align: center;">Arpa Service is dedicated to connecting hospitality businesses with trained professionals. Whether you need staff for a day or long-term, we’re here to support your success.</p>
+    <p style="text-align: center;"><strong>Our Mission:</strong> To simplify staffing for restaurants and ensure excellence in service.</p>
+    <p style="text-align: center;"><strong>Our Target:</strong> Restaurants, Cafes, Banquet Halls, Events & Caterers across India.</p>
+  </section>
+
+  <section id="services">
+    <h2 class="section-title">Our Services</h2>
+    <div class="services">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38" alt="Waiters">
+        <h3>Waiters</h3>
+        <p>Professional, well-groomed wait staff trained in service and etiquette.</p>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1606788075761-734c20b7f3f4" alt="Cooks">
+        <h3>Cooks</h3>
+        <p>Skilled chefs and kitchen staff available for all types of cuisines and events.</p>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1614741118887-b3d74e98b3c2" alt="Captains">
+        <h3>Captains</h3>
+        <p>Experienced team leaders to manage your restaurant floor and events smoothly.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="reviews">
+    <h2 class="section-title">What Our Clients Say</h2>
+    <div class="reviews">
+      <div class="card">
+        <p>"Arpa Service saved our restaurant launch. Their staff was punctual and professional!"</p>
+        <strong>- Mumba Kitchen</strong>
+      </div>
+      <div class="card">
+        <p>"Highly recommend! We hired 4 waiters and 2 cooks for our catering gig – top-notch."</p>
+        <strong>- Ahmedabad Events</strong>
+      </div>
+      <div class="card">
+        <p>"Reliable team, polite staff. Will use again for our festival stall."</p>
+        <strong>- Delhi FoodFest</strong>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" style="text-align: center;">
+    <h2 class="section-title">Contact Us</h2>
+    <p>Ready to hire professionals for your business?</p>
+    <a href="mailto:arpaservice.in@gmail.com" class="btn">Email Us Now</a>
+  </section>
+
+  <div class="footer">
+    &copy; 2025 Arpa Service. All rights reserved.
   </div>
-
-  <section id="services" class="section">
-    <h3>Our Services</h3>
-    <div class="cards">
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1551218808-94e220e084d2" alt="Waiters">
-        <h4>Waiters</h4>
-        <p>Trained and professional waiters ready to serve.</p>
-        <a href="Waiters.html" class="button">View Details</a>
-      </div>
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1600891963935-97fe2d92bfee" alt="Cooks">
-        <h4>Cooks</h4>
-        <p>Skilled cooks for all cuisines and service types.</p>
-        <a href="Cooks.html" class="button">View Details</a>
-      </div>
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9" alt="Captain">
-        <h4>Captains</h4>
-        <p>Experienced captains to manage your floor.</p>
-        <a href="Captain.html" class="button">View Details</a>
-      </div>
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1604042286761-99c9d984de11" alt="Manager">
-        <h4>Managers</h4>
-        <p>Professional managers to lead your restaurant team.</p>
-        <a href="MANAGER.HTML" class="button">View Details</a>
-      </div>
-    </div>
-  </section>
-
-  <section id="about" class="section">
-    <h3>About Us</h3>
-    <p>Arpa Service is a leading hospitality staffing agency providing professional and reliable restaurant staff across India. Our mission is to match great talent with great restaurants, ensuring exceptional service every time.</p>
-    <h4>Our Mission</h4>
-    <p>To deliver qualified and well-trained professionals to elevate your hospitality business.</p>
-    <h4>Our Target</h4>
-    <p>To be India’s most trusted restaurant staffing brand.</p>
-  </section>
-
-  <section class="section">
-    <h3>What Our Clients Say</h3>
-    <div class="cards">
-      <div class="card">
-        <p>"Best service I've experienced. Highly recommended!"</p>
-        <strong>- Urban Bites</strong>
-      </div>
-      <div class="card">
-        <p>"Our restaurant staffing needs are always fulfilled seamlessly."</p>
-        <strong>- Royal Dine</strong>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact" class="section">
-    <h3>Contact Us</h3>
-    <p>Ready to hire professionals? Get in touch today!</p>
-    <a href="mailto:contact@arpaservice.in" class="button">Contact Us</a>
-  </section>
-
-  <footer>
-    &copy; 2025 Arpa Service | All Rights Reserved
-  </footer>
 
 </body>
 </html>
