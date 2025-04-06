@@ -3,29 +3,51 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Arpa Service | Staff Data</title>
+  <title>Arpa Service</title>
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
-      background-color: #f0f8ff;
       margin: 0;
+      background: #f0f8ff;
+      color: #333;
+    }
+    header {
+      background: #004b8d;
+      color: white;
+      padding: 1.5rem;
+      text-align: center;
+    }
+    nav {
+      background: #007acc;
+      padding: 0.5rem;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    section {
       padding: 2rem;
-    }
-    h1 {
-      text-align: center;
-      color: #004b8d;
-    }
-    .upload-section {
-      background: white;
-      padding: 1rem;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      text-align: center;
-      max-width: 600px;
+      max-width: 1000px;
       margin: auto;
     }
+    h2 {
+      color: #004b8d;
+    }
+    .card {
+      background: white;
+      padding: 1rem;
+      margin: 1rem 0;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .upload-section {
+      text-align: center;
+    }
     input[type="file"] {
-      margin: 1rem auto;
+      margin-top: 1rem;
     }
     table {
       width: 100%;
@@ -36,7 +58,6 @@
     th, td {
       border: 1px solid #ccc;
       padding: 0.75rem;
-      text-align: left;
     }
     th {
       background-color: #007acc;
@@ -45,57 +66,96 @@
     tr:nth-child(even) {
       background-color: #f2f9ff;
     }
+    footer {
+      background: #004b8d;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+      margin-top: 3rem;
+    }
   </style>
 </head>
 <body>
-  <h1>Arpa Service - Staff List</h1>
+
+<header>
+  <h1>Arpa Service</h1>
+  <p>Trusted Staffing for Restaurants, Hotels & More</p>
+</header>
+
+<nav>
+  <a href="#about">About Us</a>
+  <a href="#mission">Our Mission</a>
+  <a href="#services">Services</a>
+  <a href="#upload">Upload Staff</a>
+</nav>
+
+<section id="about" class="card">
+  <h2>About Us</h2>
+  <p>We connect restaurants and businesses with trusted waiters, cooks, housekeepers, and more. With Arpa Service, quality staff is just a click away.</p>
+</section>
+
+<section id="mission" class="card">
+  <h2>Our Mission</h2>
+  <p>To provide reliable, skilled, and verified support staff across the hospitality industry while ensuring transparency and affordability for employers.</p>
+</section>
+
+<section id="services" class="card">
+  <h2>Our Services</h2>
+  <ul>
+    <li>Hire Waiters</li>
+    <li>Hire Cooks</li>
+    <li>Hire Housekeeping Staff</li>
+    <li>Staff for Events & Catering</li>
+  </ul>
+</section>
+
+<section id="upload" class="card">
+  <h2>Upload Staff Excel</h2>
   <div class="upload-section">
-    <label><strong>Upload Excel File (XLSX):</strong></label><br>
     <input type="file" id="excel-file" accept=".xlsx" />
+    <div id="table-container"></div>
   </div>
+</section>
 
-  <div id="table-container"></div>
+<footer>
+  &copy; 2025 Arpa Service | Powered by You
+</footer>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
-  <script>
-    document.getElementById('excel-file').addEventListener('change', function(e) {
-      const reader = new FileReader();
-      reader.onload = function(e) {
-        const data = new Uint8Array(e.target.result);
-        const workbook = XLSX.read(data, {type: 'array'});
-        const sheet = workbook.Sheets[workbook.SheetNames[0]];
-        let json = XLSX.utils.sheet_to_json(sheet, {header:1});
-        
-        // Generate header row
-        let headers = json[0];
-        headers.unshift('ID'); // Add ID column
-        let body = '';
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+<script>
+  document.getElementById("excel-file").addEventListener("change", function(e) {
+    const file = e.target.files[0];
+    const reader = new FileReader();
+    reader.onload = function(evt) {
+      const data = new Uint8Array(evt.target.result);
+      const workbook = XLSX.read(data, {type: "array"});
+      const sheet = workbook.Sheets[workbook.SheetNames[0]];
+      const json = XLSX.utils.sheet_to_json(sheet, {header: 1});
+      const headers = json[0];
+      const rows = json.slice(1);
+      
+      // Generate HTML table
+      let html = '<table><tr><th>ID</th>';
+      headers.forEach(h => html += `<th>${h}</th>`);
+      html += '</tr>';
+      
+      rows.forEach((row, idx) => {
+        let role = row[0]?.toLowerCase() || 'staff';
+        let idPrefix = 'arpa' + role.replace(/\s/g, '');
+        let id = `${idPrefix}${(idx+1).toString().padStart(3, '0')}`;
+        html += `<tr><td>${id}</td>`;
+        headers.forEach((_, i) => {
+          html += `<td>${row[i] || ''}</td>`;
+        });
+        html += '</tr>';
+      });
 
-        let roleIndex = headers.findIndex(h => h.toLowerCase().includes('role'));
+      html += '</table>';
+      document.getElementById("table-container").innerHTML = html;
+    };
+    reader.readAsArrayBuffer(file);
+  });
+</script>
 
-        for (let i = 1; i < json.length; i++) {
-          let row = json[i];
-          let role = (row[roleIndex] || '').toLowerCase();
-          let idPrefix = 'arpageneral';
-          if (role.includes('cook')) idPrefix = 'arpacook';
-          else if (role.includes('waiter')) idPrefix = 'arpawaiter';
-          else if (role.includes('clean')) idPrefix = 'arpaclean';
-
-          let id = idPrefix + String(i).padStart(3, '0');
-          row.unshift(id);
-
-          body += '<tr>';
-          headers.forEach((_, idx) => {
-            body += `<td>${row[idx] || ''}</td>`;
-          });
-          body += '</tr>';
-        }
-
-        let tableHTML = `<table><thead><tr>${headers.map(h => `<th>${h}</th>`).join('')}</tr></thead><tbody>${body}</tbody></table>`;
-        document.getElementById('table-container').innerHTML = tableHTML;
-      };
-      reader.readAsArrayBuffer(e.target.files[0]);
-    });
-  </script>
 </body>
 </html>
