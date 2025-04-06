@@ -1,142 +1,102 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ArpaService - Premium Services</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ArpaService - Hire Staff & Get Jobs</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
-      padding: 0;
-      background-color: #f0f8ff;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f4f8fc;
       color: #333;
     }
     header {
-      background-color: #007BFF;
-      color: white;
-      padding: 30px 20px;
+      background: linear-gradient(to right, #0047ab, #3a80e9);
+      padding: 50px 20px;
       text-align: center;
+      color: white;
     }
     header h1 {
+      font-size: 3.5em;
       margin: 0;
-      font-size: 3em;
     }
-    .hero {
-      background: linear-gradient(rgba(0,0,50,0.6), rgba(0,0,50,0.6)), url('hero.jpg') no-repeat center center/cover;
-      height: 400px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    header p {
+      font-size: 1.3em;
+      margin-top: 10px;
+    }
+    .cta-buttons {
+      margin-top: 30px;
+    }
+    .cta-buttons a {
+      background: white;
+      color: #0047ab;
+      padding: 15px 30px;
+      margin: 10px;
+      text-decoration: none;
+      border-radius: 30px;
+      font-weight: bold;
+      border: 2px solid #fff;
+      transition: all 0.3s ease;
+      display: inline-block;
+    }
+    .cta-buttons a:hover {
+      background: #0047ab;
       color: white;
-      text-align: center;
+      border: 2px solid white;
     }
-    .hero h2 {
-      font-size: 2.5em;
+    .hero-image {
+      width: 100%;
+      max-height: 400px;
+      object-fit: cover;
     }
     section {
       padding: 50px 20px;
       text-align: center;
     }
-    .services {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
+    section h2 {
+      font-size: 2.5em;
+      margin-bottom: 20px;
     }
-    .service {
-      width: 250px;
-      margin: 15px;
-      padding: 20px;
-      background: white;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    }
-    .service h3 {
-      margin-bottom: 10px;
-      color: #007BFF;
+    section p {
+      max-width: 800px;
+      margin: auto;
+      font-size: 1.2em;
     }
     footer {
-      background-color: #007BFF;
+      background: #0047ab;
       color: white;
       text-align: center;
       padding: 20px;
-    }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 30px;
-    }
-    table, th, td {
-      border: 1px solid #ccc;
-    }
-    th, td {
-      padding: 10px;
-      text-align: center;
-    }
-    th {
-      background-color: #007BFF;
-      color: white;
     }
   </style>
 </head>
-<body>  <header>
+<body>
+
+  <header>
     <h1>ArpaService</h1>
-    <p>Your premium solution for trusted staff</p>
-  </header>  <section class="hero">
-    <div>
-      <h2>Welcome to ArpaService</h2>
-      <p>Connecting you with reliable domestic workers across cities</p>
+    <p>Premium Staffing Solutions for Restaurants, Hotels & More</p>
+    <div class="cta-buttons">
+      <a href="https://wa.me/91YOURNUMBER?text=Hello%20ArpaService,%20I%20want%20to%20hire%20staff">Hire a Staff</a>
+      <a href="https://forms.gle/YOUR_GOOGLE_FORM_LINK">Need a Job?</a>
     </div>
-  </section>  <section class="about">
+  </header>
+
+  <img class="hero-image" src="your-banner-image.jpg" alt="Hero Banner" />
+
+  <section>
     <h2>About Us</h2>
-    <p>We are committed to connecting families and businesses with trained, verified and reliable staff such as cooks, waiters, housekeepers, and more. Our mission is to simplify your hiring process with trust and ease.</p>
-  </section>  <section class="services">
-    <h2>Our Services</h2>
-    <div class="service">
-      <h3>Cook</h3>
-      <p>Professional cooks for homes and small businesses</p>
-    </div>
-    <div class="service">
-      <h3>Waiter</h3>
-      <p>Trained waiters for events and restaurants</p>
-    </div>
-    <div class="service">
-      <h3>Housekeeping</h3>
-      <p>Experienced cleaners for home and office</p>
-    </div>
-  </section>  <section class="data">
-    <h2>Available Staff</h2>
-    <table id="staffTable">
-      <thead>
-        <tr>
-          <th>ID</th>
-          <th>Name</th>
-          <th>Category</th>
-          <th>Area</th>
-          <th>Salary</th>
-        </tr>
-      </thead>
-      <tbody>
-        <!-- Dynamic rows from Google Sheets will be injected here -->
-      </tbody>
-    </table>
-  </section>  <footer>
-    <p>&copy; 2025 ArpaService. All rights reserved.</p>
-  </footer>  <script>
-    fetch('https://opensheet.elk.sh/YOUR_SHEET_ID/Sheet1')
-      .then(res => res.json())
-      .then(data => {
-        const tbody = document.querySelector('#staffTable tbody');
-        data.forEach(row => {
-          const tr = document.createElement('tr');
-          tr.innerHTML = `
-            <td>${row.ID}</td>
-            <td>${row.Name}</td>
-            <td>${row.Category}</td>
-            <td>${row.Area}</td>
-            <td>${row.Salary}</td>
-          `;
-          tbody.appendChild(tr);
-        });
-      });
-  </script></body>
+    <p>We connect trusted cooks, waiters, housekeepers, and hotel staff with the right employers. Whether you're hiring or looking for a job – ArpaService makes it simple and premium.</p>
+  </section>
+
+  <section>
+    <h2>Our Mission</h2>
+    <p>To provide quality manpower services with trust, speed, and convenience. Our goal is to offer both job seekers and employers a smooth and premium experience.</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 ArpaService.in | Designed with care</p>
+  </footer>
+
+</body>
 </html>
