@@ -1,91 +1,171 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Arpa Services - Staffing solutions for restaurants providing waiters, cooks, and helpers.">
+    <meta name="description" content="Arpa Services connects restaurants with skilled waiters, cooks, and helpers.">
     <meta name="keywords" content="restaurant staffing solutions, waiters for hire, cook placement services, helper staffing solutions">
-    <meta name="author" content="Arpa Services">
     <title>Arpa Services - Premium Staffing Solutions</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+            color: #333;
+        }
+        header {
+            background-color: #0066cc;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            font-size: 36px;
+            margin: 0;
+        }
+        nav {
+            background-color: #003366;
+            padding: 10px 0;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+        nav ul {
+            list-style: none;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline-block;
+            margin: 0 20px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .hero-section {
+            background-image: url('your-hero-image.jpg'); /* Replace with your hero image */
+            background-size: cover;
+            background-position: center;
+            height: 400px;
+            color: white;
+            text-align: center;
+            padding-top: 100px;
+        }
+        .hero-section h2 {
+            font-size: 48px;
+            font-weight: 700;
+        }
+        .services-section, .testimonials-section, .about-section {
+            padding: 60px 20px;
+            text-align: center;
+        }
+        .service-card {
+            display: inline-block;
+            width: 30%;
+            margin: 15px;
+            background-color: #f2f2f2;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .service-card h3 {
+            font-size: 24px;
+            color: #0066cc;
+        }
+        .cta-button {
+            background-color: #0066cc;
+            color: white;
+            padding: 15px 30px;
+            font-size: 18px;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 20px;
+        }
+        .cta-button:hover {
+            background-color: #004080;
+        }
+        footer {
+            background-color: #003366;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        footer a {
+            color: #ffcc00;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+    </style>
 </head>
-
 <body>
-    <header>
-        <nav>
-            <div class="logo">
-                <h1>Arpa Services</h1>
-            </div>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Contact Us</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <section id="hero">
-        <div class="hero-content">
-            <h2>Providing Skilled Waiters, Cooks, and Helpers</h2>
-            <p>Empowering unskilled, rural, and lower-class individuals to succeed in the restaurant industry.</p>
-            <a href="#contact" class="cta-btn">Get Started</a>
-        </div>
-    </section>
+<header>
+    <h1>Arpa Services</h1>
+    <p>Your trusted staffing solution for the restaurant industry</p>
+</header>
 
-    <section id="services">
-        <div class="service-container">
-            <div class="service">
-                <h3>Waiter Placement</h3>
-                <p>Hire highly trained waiters who provide exceptional service in any restaurant environment.</p>
-            </div>
-            <div class="service">
-                <h3>Cook Placement</h3>
-                <p>Our cooks are skilled in multiple cuisines, ensuring your kitchen operates smoothly and efficiently.</p>
-            </div>
-            <div class="service">
-                <h3>Helper Placement</h3>
-                <p>Reliable helpers to assist in both the kitchen and dining areas, ensuring top-notch service.</p>
-            </div>
-        </div>
-    </section>
+<nav>
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+    </ul>
+</nav>
 
-    <section id="about-us">
-        <h2>About Us</h2>
-        <p>At Arpa Services, we specialize in providing skilled restaurant staff for restaurants in need of waiters, cooks, and helpers. Our workers are verified and ready to deliver quality service to enhance your restaurant's operation.</p>
-    </section>
+<section class="hero-section">
+    <h2>Empowering Restaurants with Skilled Staff</h2>
+    <a href="#contact" class="cta-button">Get Started</a>
+</section>
 
-    <section id="testimonials">
-        <h2>What Our Clients Say</h2>
-        <div class="testimonial">
-            <p>"Arpa Services has been a game-changer for our restaurant. Their workers are efficient and reliable!"</p>
-            <strong>- Restaurant Owner</strong>
-        </div>
-        <div class="testimonial">
-            <p>"We found qualified workers in no time, thanks to Arpa Services. Highly recommend!"</p>
-            <strong>- Hotel Manager</strong>
-        </div>
-    </section>
+<section class="services-section" id="services">
+    <h2>Our Services</h2>
+    <div class="service-card">
+        <h3>Waiter Placement</h3>
+        <p>Hire highly trained waiters who are professional, reliable, and committed to delivering top-notch service.</p>
+    </div>
+    <div class="service-card">
+        <h3>Cook Placement</h3>
+        <p>Our cooks come with specialized skills in various cuisines, ensuring your kitchen runs smoothly.</p>
+    </div>
+    <div class="service-card">
+        <h3>Helper Placement</h3>
+        <p>Our helpers are dedicated to supporting kitchen and dining room staff.</p>
+    </div>
+</section>
 
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <form action="#">
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea placeholder="Your Message" required></textarea>
-            <button type="submit">Send Message</button>
-        </form>
-    </section>
+<section class="about-section" id="about">
+    <h2>About Us</h2>
+    <p>At Arpa Services, we specialize in providing reliable staffing solutions for the restaurant industry. We connect businesses with skilled waiters, cooks, and helpers who are trained, verified, and ready to provide seamless service. Our mission is to empower unskilled, rural, and lower-class individuals by offering job opportunities and skill development, contributing to the growth of the restaurant industry.</p>
+</section>
 
-    <footer>
-        <div class="footer-info">
-            <p>&copy; 2025 Arpa Services. All rights reserved.</p>
-            <p>Contact: info@arpaservices.com | Phone: +91-XXXXXXXXXX</p>
-        </div>
-    </footer>
+<section class="testimonials-section" id="testimonials">
+    <h2>Client Testimonials</h2>
+    <p>"We've been partnering with Arpa Services for over 6 months, and their workers have been a game-changer for our restaurant."</p>
+    <p>"With Arpa Services, we’ve been able to find qualified workers quickly and efficiently."</p>
+</section>
+
+<section class="contact-section" id="contact">
+    <h2>Contact Us</h2>
+    <p>If you're looking for skilled staff, feel free to reach out!</p>
+    <p>Address: Arpa Services, 123 Business Avenue, Ahmedabad, Gujarat, India.</p>
+    <p>Phone: +91-XXXXXXXXXX</p>
+    <p>Email: <a href="mailto:info@arpaservices.com">info@arpaservices.com</a></p>
+    <p><a href="https://facebook.com/ArpaServices" target="_blank">Facebook</a> | <a href="https://instagram.com/ArpaServices" target="_blank">Instagram</a> | <a href="https://linkedin.com/ArpaServices" target="_blank">LinkedIn</a></p>
+</section>
+
+<footer>
+    <p>&copy; 2025 Arpa Services. All Rights Reserved.</p>
+    <p><a href="#faq">FAQ</a> | <a href="#blog">Blog</a></p>
+</footer>
 
 </body>
-
 </html>
