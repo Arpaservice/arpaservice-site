@@ -1,82 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Arpa Services – Hospitality Staffing in Gujarat</title>
-  <meta name="description" content="Arpa Services provides experienced waiters, cooks, captains, and managers to restaurants and hotels across Gujarat. Your reliable hospitality staffing partner.">
-  <link rel="stylesheet" href="style.css"> <!-- Link to external CSS -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Arpa Services - Staffing solutions for restaurants providing waiters, cooks, and helpers.">
+    <meta name="keywords" content="restaurant staffing solutions, waiters for hire, cook placement services, helper staffing solutions">
+    <meta name="author" content="Arpa Services">
+    <title>Arpa Services - Premium Staffing Solutions</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>Arpa Services</h1>
+            </div>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<header>
-  <h1>Arpa Services</h1>
-  <p>Your Trusted Hospitality Staffing Partner in Gujarat</p>
-</header>
+    <section id="hero">
+        <div class="hero-content">
+            <h2>Providing Skilled Waiters, Cooks, and Helpers</h2>
+            <p>Empowering unskilled, rural, and lower-class individuals to succeed in the restaurant industry.</p>
+            <a href="#contact" class="cta-btn">Get Started</a>
+        </div>
+    </section>
 
-<nav>
-  <ul>
-    <li><a href="#about">About Us</a></li>
-    <li><a href="#services">Our Services</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-</nav>
+    <section id="services">
+        <div class="service-container">
+            <div class="service">
+                <h3>Waiter Placement</h3>
+                <p>Hire highly trained waiters who provide exceptional service in any restaurant environment.</p>
+            </div>
+            <div class="service">
+                <h3>Cook Placement</h3>
+                <p>Our cooks are skilled in multiple cuisines, ensuring your kitchen operates smoothly and efficiently.</p>
+            </div>
+            <div class="service">
+                <h3>Helper Placement</h3>
+                <p>Reliable helpers to assist in both the kitchen and dining areas, ensuring top-notch service.</p>
+            </div>
+        </div>
+    </section>
 
-<section id="about">
-  <h2>About Us</h2>
-  <p>Arpa Services specializes in providing trained and professional hospitality staff to restaurants, hotels, and food service businesses across Gujarat. Whether you need waiters, chefs, kitchen staff, or managerial staff, we have you covered with reliable and experienced personnel. Our mission is to provide the best staff for your hospitality business, ensuring excellent service and customer satisfaction.</p>
-</section>
+    <section id="about-us">
+        <h2>About Us</h2>
+        <p>At Arpa Services, we specialize in providing skilled restaurant staff for restaurants in need of waiters, cooks, and helpers. Our workers are verified and ready to deliver quality service to enhance your restaurant's operation.</p>
+    </section>
 
-<section id="services">
-  <h2>Our Services</h2>
-  <p>We offer a wide range of hospitality staffing solutions including:</p>
-  <ul>
-    <li><strong>Waiters</strong> for restaurants, cafes, and banquets</li>
-    <li><strong>Captains</strong> with team management and leadership experience</li>
-    <li><strong>Cooks</strong> trained in various cuisines</li>
-    <li><strong>Managers</strong> for restaurant and hotel supervision</li>
-    <li><strong>Kitchen Helpers</strong> and cleaning crew</li>
-  </ul>
-  <p>Our staff is trained and ready to serve businesses across Gujarat. We cater to restaurants, hotels, event venues, and any other hospitality-related businesses.</p>
-</section>
+    <section id="testimonials">
+        <h2>What Our Clients Say</h2>
+        <div class="testimonial">
+            <p>"Arpa Services has been a game-changer for our restaurant. Their workers are efficient and reliable!"</p>
+            <strong>- Restaurant Owner</strong>
+        </div>
+        <div class="testimonial">
+            <p>"We found qualified workers in no time, thanks to Arpa Services. Highly recommend!"</p>
+            <strong>- Hotel Manager</strong>
+        </div>
+    </section>
 
-<section id="contact">
-  <h2>Contact Us</h2>
-  <p>Get in touch with us to discuss your staffing needs:</p>
-  <p><strong>Phone:</strong> +91-9974111142</p>
-  <p><strong>Email:</strong> <a href="mailto:arpaservice.in">arpaservice.in</a></p>
-  <p><strong>Location:</strong> Serving clients across Gujarat</p>
-</section>
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form action="#">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
 
-<section id="request-staff">
-  <h2>Request Staff</h2>
-  <p>If you're in need of hospitality staff, feel free to request our services by filling out the form below:</p>
-  <form action="/submit_request" method="post">
-    <label for="name">Your Name:</label>
-    <input type="text" id="name" name="name" required><br>
-    
-    <label for="business">Business Name:</label>
-    <input type="text" id="business" name="business" required><br>
-    
-    <label for="staff-required">Staff Required:</label>
-    <select id="staff-required" name="staff-required">
-      <option value="waiters">Waiters</option>
-      <option value="captains">Captains</option>
-      <option value="cooks">Cooks</option>
-      <option value="managers">Managers</option>
-      <option value="all">All</option>
-    </select><br>
-
-    <label for="date-required">Date Required:</label>
-    <input type="date" id="date-required" name="date-required" required><br>
-
-    <input type="submit" value="Request Staff">
-  </form>
-</section>
-
-<footer>
-  <p>&copy; 2025 Arpa Services. All rights reserved.</p>
-</footer>
+    <footer>
+        <div class="footer-info">
+            <p>&copy; 2025 Arpa Services. All rights reserved.</p>
+            <p>Contact: info@arpaservices.com | Phone: +91-XXXXXXXXXX</p>
+        </div>
+    </footer>
 
 </body>
+
 </html>
